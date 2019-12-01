@@ -1,10 +1,13 @@
 import * as actionType from '../action';
 
+let counter = 0;
+
 const initialState = {
+
     users: [
-        { firstName: 'Eliran', lastName: 'Menachem', age: 34 },
-        { firstName: 'Asaf', lastName: 'Ariali', age: 33 },
-        { firstName: 'David', lastName: 'Feldman', age: 35 }
+        { firstName: 'Eliran', lastName: 'Menachem', age: 34, id: counter++ },
+        { firstName: 'Asaf', lastName: 'Ariali', age: 33, id: counter++ },
+        { firstName: 'David', lastName: 'Feldman', age: 35, id: counter++ }
     ]
 
 }

@@ -7,7 +7,29 @@ class Users extends Component {
         return (
             <div className='container'>
                 <div className='row'>
-                    <h1>hello</h1>
+                    <h1>Users:</h1>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.props.users.map((user) => {
+                                return (
+                                    <tr key={user.id}>
+                                        <th>{user.id}</th>
+                                        <td>{user.firstName}</td>
+                                        <td>{user.lastName}</td>
+                                        <td>{user.age}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         )
@@ -15,7 +37,8 @@ class Users extends Component {
 };
 const mapStateToProps = state => {
     return {
-        users: state.users
+        users: state.users.users,
+        bankAccount: state.bankAccount.bank_accounts
     };
 };
 
