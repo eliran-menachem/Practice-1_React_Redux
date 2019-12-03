@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actionTypes from '../store/action';
-import { stat } from 'fs';
+// import { stat } from 'fs';
 
 class FormAddUser extends Component {
    
