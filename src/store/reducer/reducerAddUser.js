@@ -3,13 +3,11 @@ import * as actionType from '../action';
 let counter = 0;
 
 const initialState = {
-
     users: [
         { firstName: 'Eliran', lastName: 'Menachem', age: 34, id: counter++ },
-        { firstName: 'Asaf', lastName: 'Ariali', age: 33, id: counter++ },
+        { firstName: 'Asaf', lastName: 'Arieli', age: 33, id: counter++ },
         { firstName: 'David', lastName: 'Feldman', age: 35, id: counter++ }
-    ]
-
+    ],
 }
 
 const reducer = (state = initialState, action) => {
@@ -17,6 +15,7 @@ const reducer = (state = initialState, action) => {
         case actionType.ADDNEWUSER:
             return {
                 ...state,
+                users: state.users.concat(action.newUser)
 
             }
 

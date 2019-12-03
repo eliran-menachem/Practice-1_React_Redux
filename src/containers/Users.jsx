@@ -18,6 +18,7 @@ class Users extends Component {
                             </tr>
                         </thead>
                         <tbody>
+                          
                             {this.props.users.map((user) => {
                                 return (
                                     <tr key={user.id}>

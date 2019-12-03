@@ -11,7 +11,8 @@ import reducerBankAccount from './store/reducer/reducerBankAccount';
 
 const rootReducer = combineReducers({
     users: reducerAddUser,
-    bankAccount:reducerBankAccount
+    bankAccount:reducerBankAccount,
+    
 });
 
 const store = createStore(rootReducer)
