@@ -7,6 +7,7 @@ class FormAddUser extends Component {
    
     state = {
         user: {
+            id:"",
             firstName: '',
             lastName: '',
             age: 0,
@@ -26,7 +27,7 @@ class FormAddUser extends Component {
 
     render() {
         console.log(this.props.users);
-
+        
 
         return (
 
@@ -68,7 +69,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        createNewUser: (newUser) => dispatch({ type: actionTypes.ADDNEWUSER,newUser}),
+        createNewUser: (newUser) => {
+            newUser.id = store.counter;
+            dispatch({ type: actionTypes.ADDNEWUSER,newUser})
+        }
 
     };
 };
